@@ -1,0 +1,43 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+
+ <h1 class="text-center p-5 text-info">Students Mark Details</h1>
+
+<div class="container">
+
+                    <table class="table">
+                      <thead class="table-success">
+                        <tr>
+
+                          <th scope="col">ROLLNO</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">SUB</th>
+                            <th scope="col">MARKS</th>
+                          <th scope="col">GRADES</th>
+                        </tr>
+                      </thead>
+
+                        {% for STUD in STUDENT %}
+                          <tbody>
+                            <tr>
+
+                              <td>{{STUD.rollno}}</td>
+                              <td>{{STUD.name}}</td>
+                              <td>{{STUD.sub}}</td>
+                              <td>{{STUD.marks}}</td>
+                              <td>{{STUD.grade}}</td>
+
+
+
+                            </tr>
+
+                          </tbody>
+
+
+                        {% endfor %}
+                    </table>
+</div>
+
+
+{% endblock %}

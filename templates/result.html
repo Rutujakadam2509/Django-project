@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if Student %}
+{% for s in Student %}
+
+{{s.rollno}}
+{{s.name}}
+
+{%endfor%}
+{%else%}
+<p>no records</p>
+{%endif%}
+
+
+</body>
+</html>
